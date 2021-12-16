@@ -2,6 +2,7 @@
 
 import Foundation
 
+/* https://www.hackingwithswift.com/100/1 */
 // 1. Variables ———————————————————————————————————————————————————————————————————————————————————————————————————————————————
 var greeting = "Hello, playground"
 

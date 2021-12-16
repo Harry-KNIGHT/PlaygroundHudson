@@ -2,6 +2,8 @@
 
 import Foundation
 
+/* https://www.hackingwithswift.com/100/2 */
+
 // 1. Arrays ——————————————————————————————————————————————————————————————————————————————————————————————————————————
 let arrayOfFriends = ["Elliot", "Jeronimo", "Arthur", "Tom", "Frike"]
 arrayOfFriends[0]
