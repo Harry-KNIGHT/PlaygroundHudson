@@ -83,27 +83,71 @@ let height = ["Elliot": 1.84, "Jeronimo": 1.75]
 
 height["Elliot"]
 
-// 6. Dictionnary default value
+// 6. Dictionnary default value ———————————————————————————————————————————————————————————————————————————————————————
 
 let favoriteAlbum = ["Elliot": "Abbey Road",
                      "Mickael": "Certified Lover Boy"]
 favoriteAlbum["Elliot"]
 favoriteAlbum["Arthur", default: "Unknow"]
 
-// 7. Creating emply collections
+// 7. Creating empty collections ——————————————————————————————————————————————————————————————————————————————————————
 
+// Emplty array
 var emptyArray1 = [Double]()
 var emptyArray2 = Array<Int>()
 
+//Empty Dictionnary
 var emptyDictionnary1 = [String: String]()
 emptyDictionnary1["Elliot"] = "Green"
 
 var emptyDictionnary2 = Dictionary<String, Int>()
 
-
-
+//Empty Set
 var emptySetString = Set<String>()
 var emptySetInt = Set<Int>()
 
+// 8. Enumeration —————————————————————————————————————————————————————————————————————————————————————————————————————
 
+let result = "Fail"
+let result2 = "Sucees"
+
+enum Result {
+    case failure
+    case succes
+}
+
+let result4 = Result.failure
+
+enum Direction {
+    case east
+    case north
+    case south
+    case ouest
+}
+
+let thatWay = Direction.north
+
+// 9. Enum associated values ——————————————————————————————————————————————————————————————————————————————————————————
+
+enum Activity {
+    case bored
+    case running(destination: String)
+    case talking(topic: String)
+    case singing(volume: Int)
+}
+let talking = Activity.talking(topic: "Football")
+
+// 10. Enum raw value —————————————————————————————————————————————————————————————————————————————————————————————————
+
+enum Planet: Int {
+    case mercury = 1
+    case venus
+    case earth
+    case mars
+}
+let venus = Planet(rawValue: 2)
+
+/* 10. Final
+https://www.hackingwithswift.com/sixty/2/11/complex-types-summary
+ */
 
