@@ -2,7 +2,7 @@
 
 import Foundation
 
-// 1. Variables
+// 1. Variables ———————————————————————————————————————————————————————————————————————————————————————————————————————————————
 var greeting = "Hello, playground"
 
 greeting = "Bye playground !"
@@ -18,7 +18,7 @@ print(greeting)
 var age = 23
 var popuation = 8_000_000
 
-// 3 Mutiple String
+// 3 Mutiple String ———————————————————————————————————————————————————————————————————————————————————————————————————————————
 
 var str1 = """
 This goes
@@ -33,8 +33,7 @@ over multiple \
 line
 """
 
-// 4. Double and Booleans
-
+// 4. Double and Booleans —————————————————————————————————————————————————————————————————————————————————————————————————————
 var pi = 3.141 // That's a Double
 // You can't mix Double and Int bc of their type.
 var awesome = true //Bool
@@ -45,7 +44,7 @@ var score = 33
 var finalScore = "Your score is \(score) points"
 var result = "The test result are here : \(finalScore.lowercased())"
 
-// 6. Constants
+// 6. Constants ———————————————————————————————————————————————————————————————————————————————————————————————————————————————
 
 let taylor = "Swift" // You can not change the value like variables.
 
