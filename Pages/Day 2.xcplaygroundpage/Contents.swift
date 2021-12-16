@@ -76,4 +76,34 @@ let pythons = ["Eric", "Graham", "John", "Michael", "Terry", "Terry"]
 
 // 5. Dictionnaries ———————————————————————————————————————————————————————————————————————————————————————————————————
 
+/*
+Dictionaries and arrays are both ways of storing lots of data in one variable, but they store them in different ways: dictionaries let us choose a “key” that identifies the item we want to add, whereas arrays just add each item sequentially.
+ */
+let height = ["Elliot": 1.84, "Jeronimo": 1.75]
+
+height["Elliot"]
+
+// 6. Dictionnary default value
+
+let favoriteAlbum = ["Elliot": "Abbey Road",
+                     "Mickael": "Certified Lover Boy"]
+favoriteAlbum["Elliot"]
+favoriteAlbum["Arthur", default: "Unknow"]
+
+// 7. Creating emply collections
+
+var emptyArray1 = [Double]()
+var emptyArray2 = Array<Int>()
+
+var emptyDictionnary1 = [String: String]()
+emptyDictionnary1["Elliot"] = "Green"
+
+var emptyDictionnary2 = Dictionary<String, Int>()
+
+
+
+var emptySetString = Set<String>()
+var emptySetInt = Set<Int>()
+
+
 
