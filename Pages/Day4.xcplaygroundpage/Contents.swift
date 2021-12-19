@@ -67,7 +67,6 @@ outerLoop: for i in 1...10 {
     for j in 1...10 {
         let product = i * j
         print ("\(i) * \(j) is \(product)")
-        
         if product == 50 {
             print("It's a bullseye!")
             break outerLoop
@@ -87,9 +86,14 @@ for i in 1...10 {
 }
 // 7. Infinite loops ——————————————————————————————————————————————————————————————————————————————————————————————————————————
 
+var counter = 0
+while true {
+    print("True !")
+    counter += 1
+    if counter == 200 {
+        break
+    }
+}
 // 8. Loop summary ————————————————————————————————————————————————————————————————————————————————————————————————————————————
 
 
-var int = 10
-
-print(int % 2)
