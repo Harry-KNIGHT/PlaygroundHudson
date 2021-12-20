@@ -77,10 +77,38 @@ greets("Bouba", nicely: false)
 
 // 7. Variadic functions
 
+func squareThree(numbersThree: Int...) {
+    for number in numbersThree {
+        print("\(number) squared is \(number * number)")
+    }
+}
+squareThree(numbersThree: 1, 2, 4, 5, 6)
+// 8. Writing throwing functions, 9. Running throwing functions
 
-// 8. Writing throwing functions
+enum PasswordError: Error {
+    case obvious
+}
 
-// 9. Running throwing functions
+func checkPassword(_ password: String) throws -> Bool {
+    if password == "password" {
+        throw PasswordError.obvious
+    }
+    return true
+}
 
+do {
+    try checkPassword("password")
+    print("that password is good")
+    
+} catch {
+    print("You can't use that password")
+}
 // 10. Inout parameters
 
+func doubleInPlace(integer: inout Double) {
+    integer *= 2.0
+    print(integer)
+}
+
+var myNum = 10.0
+doubleInPlace(integer: &myNum)
