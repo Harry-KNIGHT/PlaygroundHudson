@@ -37,9 +37,13 @@ traveling { (place: String) -> String in
 
 // 3. Shorthand parameter names
 
-travel {
-    "I'm going to \($0) in my car"
-}
+
+/*
+ travel {
+     "I'm going to \($0) in my car"
+ }
+ */
+
 
 // 4.
 
