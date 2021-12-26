@@ -70,6 +70,24 @@ var person = Person(name: "Mickael")
 print(person)
 print(person.makeAnonymous())
 
-// 6.
+// 6. Properties and methods of strings
 
-// 7.
+let string = "You're asking me will my love grow, I don't know, I don't know"
+print(string.count)
+print(string.uppercased())
+print(string.hasPrefix("Love"))
+print(string.sorted())
+print(string.isEmpty)
+print(string.dropLast())
+
+// 7. Properties and methods of arrays
+
+
+var toys: [String] = ["Woody"]
+
+toys.append("Buzz")
+
+toys.firstIndex(of: "Buzz")
+
+print(toys.sorted())
+toys.remove(at: 0)
