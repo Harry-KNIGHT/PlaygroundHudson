@@ -62,3 +62,35 @@ struct Someone {
 var zohra = Someone(name: "Zohra")
 
 zohra.familyTree // wrote like this due to the lazy propertie in struct
+
+// 4. Static properties and methods
+
+struct Student {
+    static var studentCounter = 0
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+        Student.studentCounter += 1
+    }
+}
+
+Student(name: "Taylor")
+Student(name: "Raspberry")
+print(Student.studentCounter)
+
+// 5. Access control
+
+struct Boss {
+    private var id: String
+    
+    init(id: String) {
+        self.id = id
+    }
+    
+    func indentify() -> String {
+        return "My social security number is \(id)"
+    }
+}
+
+Boss(id: "12345")
