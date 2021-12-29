@@ -118,7 +118,7 @@ class Singers {
 }
 
 let taylor = Singers()
-taylor.name = "Ed Sheeran"
+//taylor.name = "Ed Sheeran"
 print(taylor.name)
 
-// 8.
+
