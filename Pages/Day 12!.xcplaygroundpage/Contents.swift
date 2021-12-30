@@ -85,7 +85,7 @@ let groupe = ["John", "Paul", "George", "Ringo"]
 
 let beatles = groupe.last?.uppercased()
 
-// 8. Optional try
+// 8. Optional try ————————————————————————————————————————————————————————————————————————————————————————————————————————————
 
 enum PasswordError: Error {
     case obvious
@@ -114,4 +114,42 @@ if let result = try? checkPassword("Password") {
 try! checkPassword("sekrit")
 print("OK !")
 
+// 9. Failable initiliazer
 
+struct Person {
+    var id: String
+    
+    init?(id: String) {
+        if id.count == 9 {
+            self.id = id
+        }else {
+            return nil
+        }
+    }
+}
+
+let elliot = Person(id: "Elliot Knight")
+
+// 10. Typecasting
+
+class Animal { }
+
+class Fish: Animal { }
+
+class Dog: Animal {
+    func makenoise() {
+        print("Woof !")
+    }
+}
+
+class Cat: Animal { }
+
+class Pork: Animal { }
+
+var pets = [Fish(), Dog(), Cat(), Pork(), Dog()]
+
+for pet in pets {
+    if let dog = pet as? Dog {
+        dog.makenoise()
+    }
+}
