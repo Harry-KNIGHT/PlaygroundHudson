@@ -95,4 +95,116 @@ print(twice)
 
 type(of: twice)
 
-// 6.
+// 6. Dictionnaries
+
+var myFamily = [String: String]()
+
+myFamily = ["First": "Tara",
+            "Second": "Moira",
+            "Third": "Arthur",
+            "Fourth": "Elliot"
+]
+
+myFamily["Fourth"]
+
+
+// 7. Conditional Statements
+
+var action: String
+var stayOutTooLate = true
+var nothingInBrains = true
+var person = "hater"
+
+if person == "hater" {
+    action = "hate"
+}else if person == "player" {
+    action = "play"
+}else {
+    action = "cruise"
+}
+
+if stayOutTooLate && nothingInBrains {
+    action = "cruise"
+}
+
+// ! says if it they're false
+if !stayOutTooLate && !nothingInBrains {
+    action = "cruise"
+}
+
+// 8. Loops
+
+outerloop: for i in 1...10 {
+    for j in 1...10 {
+        print("\(i) * \(j) = \(i * j)")
+        
+        if i > 10 {
+            break outerloop
+        }
+    }
+}
+
+var string = "Faker gonna"
+
+for _ in 0...5 {
+    string += " fake"
+}
+print(string)
+
+var mySongs = ["Purple Haze", "Birthday", "Redemption Song", "Layla"]
+
+for song in mySongs {
+    print("My favorite song is \(song)")
+}
+
+var people = ["Players", "Fakers", "Haters"]
+var actions = ["play", "fake", "hate"]
+
+for i in 0..<people.count {
+    print("\(people[i]), gonna \(actions[i])")
+}
+
+for i in 0..<people.count {
+    var strings = "\(people[i]) gonna"
+    
+    for _ in 0...5 {
+        strings += " \(actions[i])"
+    }
+    print(strings)
+}
+
+
+var counting = 0
+
+while true {
+    print("Counter is now \(counting)")
+    counting += 1
+    
+    if counting > 10 {
+        break
+    }
+}
+
+for music in mySongs {
+    if music == "Purple Haze" {
+        continue
+    }
+    print("My favorite song is \(music)")
+}
+
+// 9. Switch case
+
+let liveAlbum = 2
+
+switch liveAlbum {
+case 0:
+    print("You're just starting out")
+case 1:
+    print("You juste released in iTunes Lives from Soho")
+case 2:
+    print("You just released Speak Now World tour")
+    
+default:
+    print("Nothing is real")
+    
+}
