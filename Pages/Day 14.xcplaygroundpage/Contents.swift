@@ -96,7 +96,7 @@ if year == nil {
     print("It was released in \(year!)")
 }
 
-// 3. Optional Chainning
+// 3. Optional Chainning —————————————————————————————————————————————————————————————————————————————————————————————————————————
 
 func albumReleased2(_ years: Int) -> String? {
     switch years {
@@ -115,9 +115,108 @@ print("the album is \(albumm)")
 let helloWorld = "Hello World"
 print(helloWorld.uppercased())
 
-// 4.
+// 4. Enumeration (enums) ————————————————————————————————————————————————————————————————————————————————————————————————————————
+enum WeatherType {
+    case cloud
+    case sun
+    case rain
+    case wind(speed: Int)
+    case snow
+}
+
+func getHaterStatuss(meteo: WeatherType) -> String? {
+    switch meteo {
+    case .cloud, .snow:
+        return "Hate"
+    case .sun:
+        return "Enjoy with your friends"
+    case .wind(let speed) where speed < 10:
+        return "MEHHHHH"
+    default:
+        return nil
+    }
+}
+getHaterStatuss(meteo: .wind(speed: 8))
+
+// 5. Structs  ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+struct Person {
+    var clothes: String
+    var shoes: String
+    
+    /* when you write a function inside a struct, it's called a method instead. In Swift you write func whether it's a function or a method, but the distinction is preserved when you talk about them.
+     */
+    func iLoveThis() {
+        print("I love \(clothes) with \(shoes)")
+    }
+    
+}
+let elliot = Person(clothes: "T-shirts", shoes: "Sneakers")
+let tom = Person(clothes: "Chemises", shoes: "Sneakers")
+print(elliot.clothes)
+print(tom.clothes)
+
+var elliotCopy = elliot
+elliotCopy.shoes = "Flip Flop"
+
+print(elliot)
+print(elliotCopy)
+
+// 6. Classes ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+class Persons {
+    var clothes: String
+    var shoes: String
+    
+    init(clothes: String, shoes: String) {
+        self.clothes = clothes
+        self.shoes = shoes
+    }
+}
+
+// ———————————————————————————
+
+class Singer {
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+    func sing() {
+        print("Obladi oblada")
+    }
+}
+
+// Subclass
+class CountrySinger: Singer {
+    override func sing() {
+            print("You say you want a revolution")
+    }
+}
+
+class HeavyMetalSinger: Singer {
+    var noiseLevel: Int
+    
+    init(name: String, age: Int, noiseLevel: Int) {
+        self.noiseLevel = noiseLevel
+        super.init(name: name, age: age)
+    }
+    override func sing() {
+        print("Back in Black !")
+    }
+    
+}
 
 
-// 5.
+var mcCartney = Singer(name: "Paul McCartney", age: 78)
+var lennon = CountrySinger(name: "John Lennon", age: 80)
+let acdc = HeavyMetalSinger(name: "ACDC", age: 40, noiseLevel: 155)
 
-// 6.
+mcCartney.age
+mcCartney.name
+mcCartney.sing()
+lennon.sing()
+acdc.sing()
+acdc.noiseLevel
