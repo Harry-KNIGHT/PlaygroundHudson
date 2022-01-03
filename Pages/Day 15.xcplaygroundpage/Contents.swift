@@ -1,7 +1,7 @@
 //: [Previous](@previous)
 
 import Foundation
-
+import UIKit
 var greeting = "Hello, playground"
 
 //: [Next](@next)
@@ -157,3 +157,10 @@ for album in allAlbums {
 }
 
 
+// 5. Closures
+
+
+let vw = UIView()
+UIView.animate(withDuration: 0.5) {
+    vw.alpha = 0
+}
